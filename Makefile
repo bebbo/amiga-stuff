@@ -22,10 +22,10 @@ one:
 	if [ ! -e $(target) ]; then \
 	  git clone $(url) $(target); \
 	fi
-	cd $(target) && git pull
+	cd $(target) && git pull && git checkout --force
 	cd $(target) && $(init)
 	$(env) $(MAKE) -C $(target)$(subdir) -f $(mfile)
 
 .PHONY: clean
 clean:
-	for i in $$(cat .gitignore) ; do rm -rf $$i; done
+	for i in $$(cat .gitignore) ; do rm -rf $$i/*; pushd $$i; git checkout --force; popd; done
