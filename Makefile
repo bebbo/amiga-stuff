@@ -9,7 +9,7 @@ all: objfw adoom milky ace
 
 .PHONY: objfw adoom milky ace
 objfw:
-	$(MAKE) one url=https://github.com/Midar/objfw target=objfw mfile=Makefile init="./autogen.sh && ./configure --host=m68k-amigaos"
+	$(MAKE) one url=https://github.com/Midar/objfw target=objfw init="./autogen.sh && ./configure --host=m68k-amigaos"
 
 adoom:
 	$(MAKE) one url=https://github.com/AmigaPorts/ADoom target=adoom subdir=/adoom_src env="TOOLCHAIN=/opt/amiga"
@@ -18,7 +18,7 @@ milky:
 	$(MAKE) one url=https://github.com/AmigaPorts/MilkyTracker target=milky init="./build_gmake"
 
 ace:
-	$(MAKE) one url=https://github.com/AmigaPorts/ACE target=ace env="ACE_CC=m68k-amigaos-gcc" mtarget=all
+	$(MAKE) one url=https://github.com/AmigaPorts/ACE target=ace env="ACE_CC=m68k-amigaos-gcc" mtarget=all mfile=makefile
 
 .PHONY: one
 one:
