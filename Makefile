@@ -35,4 +35,4 @@ one:
 
 .PHONY: clean
 clean:
-	for i in $$(cat .gitignore) ; do rm -rf $$i/*; pushd $$i; git checkout --force; popd; done
+	for i in $$(cat .gitignore) ;do  if [ -e $$i ]; then rm -rf $$i/*; pushd $$i; git checkout --force; popd; fi; done
