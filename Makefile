@@ -4,9 +4,9 @@ init ?= echo no init
 mfile ?= Makefile
 
 .PHONY: all
-all: objfw adoom ace sam
+all: adoom ace sam
 
-disabled: milky a68k
+disabled: milky a68k objfw
 
 .PHONY: objfw adoom milky ace a68k sam
 objfw:
