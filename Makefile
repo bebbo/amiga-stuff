@@ -1,10 +1,11 @@
+SHELL = /bin/bash
 PREFIX ?= /opt/amiga
 
 init ?= echo no init
 mfile ?= Makefile
 
 .PHONY: all
-all: adoom ace sam a68k
+all: adoom sam a68k
 
 disabled: milky objfw
 
