@@ -14,7 +14,7 @@ objfw:
 	$(MAKE) one url=https://github.com/Midar/objfw target=objfw init="./autogen.sh && ./configure --host=m68k-amigaos"
 
 adoom:
-	$(MAKE) one url=https://github.com/AmigaPorts/ADoom target=adoom subdir=/adoom_src env="TOOLCHAIN=/opt/amiga"
+	$(MAKE) one url=https://github.com/bebbo/ADoom target=adoom subdir=/adoom_src env="TOOLCHAIN=/opt/amiga"
 
 milky:
 	$(MAKE) one url=https://github.com/AmigaPorts/MilkyTracker target=milky init="cmake -DCMAKE_SYSROOT=$(PREFIX) -DCMAKE_TOOLCHAIN_FILE=../CMakeMilky.txt -DCMAKE_BUILD_TYPE=Release"
